@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Automation — Come il POS, ma per la comunicazione</title>
+  <meta name="description" content="Automazioni AI per ristoranti e attività locali: risposte 24/7, prenotazioni e fidelizzazione su WhatsApp e chat web."/>
+  <style>
+    :root{
+      --bg:#0b0c10; --panel:#121317; --text:#e8e8ea; --muted:#a7a7ad; --accent:#7dd3fc; --line:#1f2330;
+    }
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#0f1117,#20232b);display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.35)}
+    .logo span{color:var(--accent);font-weight:800;font-size:22px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:16px}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;margin:10px 0 28px}
+    .hero h1{font-size:38px;margin:0 0 10px}
+    .hero p{color:var(--muted);font-size:16px;line-height:1.6}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}
+    .row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+    h2{font-size:22px;margin:0 0 8px;color:var(--accent)}
+    ul{padding-left:18px;margin:8px 0;color:var(--text)}
+    .pricing{margin-top:12px}
+    .price{font-size:28px;font-weight:800}
+    .setup{color:var(--muted)}
+    .cta{display:flex;gap:12px;margin-top:14px}
+    .btn{background:var(--accent);color:#0b1220;border:none;border-radius:10px;padding:12px 16px;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+    .btn.secondary{background:#1b2130;color:#cfd3dc;border:1px solid var(--line)}
+    footer{margin:28px 0 60px;color:var(--muted);font-size:14px}
+    hr{border:none;border-top:1px solid var(--line);margin:24px 0}
+
+    /* FLOATERS: Calendly & Chat */
+    .floater{position:fixed;right:18px;z-index:9999}
+    .cal-launcher{bottom:88px} .chat-launcher{bottom:18px}
+    .launcher{background:var(--accent);color:#0b1220;border:none;border-radius:999px;padding:12px 16px;font-weight:800;cursor:pointer;box-shadow:0 12px 34px rgba(0,0,0,.35)}
+    .panel{position:fixed;right:18px;bottom:150px;width:380px;max-height:75vh;background:var(--panel);border:1px solid var(--line);border-radius:16px;display:none;flex-direction:column;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.5)}
+    .panel-header{padding:12px 14px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px}
+    .panel-body{padding:0;overflow:auto;background:#0f131d}
+    .close{margin-left:auto;background:#202637;border:1px solid var(--line);color:#cfd3dc;border-radius:8px;padding:6px 10px;cursor:pointer}
+    iframe{width:100%;height:65vh;border:0}
+    /* Chat */
+    .chat{position:fixed;right:18px;bottom:150px;width:380px;max-height:75vh;background:var(--panel);border:1px solid var(--line);border-radius:16px;display:none;flex-direction:column;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.5)}
+    .chat-header{padding:12px 14px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px}
+    .badge{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#0f1117,#20232b);display:grid;place-items:center;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+    .badge span{font-size:18px;color:var(--accent);font-weight:800}
+    .chat-body{padding:12px;overflow:auto;color:var(--text);background:#0f131d}
+    .msg{margin:8px 0;max-width:85%;padding:10px 12px;border-radius:12px;line-height:1.35}
+    .user{background:#172033;margin-left:auto;color:var(--text)}
+    .bot{background:#0f131d;border:1px solid var(--line);color:#e8e8ea}
+    .chat-input{display:flex;gap:8px;border-top:1px solid var(--line);padding:10px;background:#0f131d}
+    .chat-input input{flex:1;background:#0f131d;border:1px solid var(--line);border-radius:10px;padding:10px;color:#e8e8ea}
+    .chat-input button{background:var(--accent);border:none;color:#0b1220;border-radius:10px;padding:10px 12px;font-weight:800;cursor:pointer}
+    .muted{color:var(--muted);font-size:12px}
+    @media(max-width:960px){.hero{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><span>A</span></div>
+        <div><strong>AI AUTOMATION</strong><div class="muted" style="font-size:12px">Come il POS, ma per la comunicazione</div></div>
+      </div>
+      <nav>
+        <a href="#features">Funzioni</a>
+        <a href="#pricing">Prezzi</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Automazioni AI per ristoranti e attività locali</h1>
+        <p>Risposte 24/7, prenotazioni, menù, richieste recensioni. Il tuo assistente digitale che non va mai in pausa.</p>
+        <div class="cta">
+          <a class="btn" href="javascript:void(0)" id="openCalendly">Prenota una demo</a>
+          <a class="btn secondary" href="#pricing">Vedi i piani</a>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Perché ti serve</h2>
+        <ul>
+          <li>Niente più messaggi persi</li>
+          <li>Più prenotazioni, meno stress</li>
+          <li>Esperienza cliente moderna</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="features" class="row">
+      <div class="card">
+        <h2>Risposte 24/7</h2>
+        <p>FAQ, orari, indirizzo e menù sempre aggiornati, anche fuori orario.</p>
+      </div>
+      <div class="card">
+        <h2>Prenotazioni smart</h2>
+        <p>Raccogliamo giorno, ora, persone e recapito in modo ordinato.</p>
+      </div>
+      <div class="card">
+        <h2>Fidelizzazione</h2>
+        <p>Follow-up post cena e richieste recensioni senza sforzo.</p>
+      </div>
+    </section>
+
+    <hr/>
+
+    <section id="pricing" class="row">
+      <div class="card">
+        <h2>Standard</h2>
+        <div class="price">€99/mese</div>
+        <div class="setup">Setup €399</div>
+        <ul><li>FAQ & orari</li><li>Menù e posizione</li><li>Chat AI base</li></ul>
+      </div>
+      <div class="card">
+        <h2>Plus</h2>
+        <div class="price">€149/mese</div>
+        <div class="setup">Setup €499</div>
+        <ul><li>Tutto di Standard</li><li>Prenotazioni guidate</li><li>Riepilogo giornaliero</li></ul>
+      </div>
+      <div class="card">
+        <h2>Pro</h2>
+        <div class="price">€199/mese</div>
+        <div class="setup">Setup €599</div>
+        <ul><li>Tutto di Plus</li><li>Richieste recensioni</li><li>Report mensile + supporto priority</li></ul>
+      </div>
+    </section>
+
+    <hr/>
+
+    <section id="contatti" class="row">
+      <div class="card">
+        <h2>Contatti</h2>
+        <p>Luca Giantin<br/>📞 +39 334 596 5522<br/>✉️ ai.automation.contact@gmail.com</p>
+        <p class="muted">Demo live disponibile — clicca “Prenota una demo”.</p>
+      </div>
+      <div class="card">
+        <h2>Come funziona</h2>
+        <p>Installazione in 24h.<br/>Personalizzazione su misura.<br/>Supporto tecnico dedicato.</p>
+      </div>
+      <div class="card">
+        <h2>Per chi</h2>
+        <p>Ristoranti, pizzerie, bar, estetiste, palestre, negozi locali.</p>
+      </div>
+    </section>
+
+    <footer>© AI Automation — tutti i diritti riservati</footer>
+  </div>
+
+  <!-- TENDINA CALENDLY -->
+  <div class="floater cal-launcher">
+    <button class="launcher" id="toggleCalendly">Prenota una demo</button>
+  </div>
+  <div class="panel" id="calPanel">
+    <div class="panel-header">
+      <div class="badge"><span>A</span></div>
+      <div><strong>Prenota una demo</strong><div class="muted">Calendly</div></div>
+      <button class="close" id="closeCalendly">Chiudi</button>
+    </div>
+    <div class="panel-body">
+      <iframe src=https://calendly.com/ai-automation-contact/30min title="Calendly"></iframe>
+    </div>
+  </div>
+
+  <!-- TENDINA CHAT -->
+  <div class="floater chat-launcher">
+    <button class="launcher" id="toggleChat">Chatta con noi</button>
+  </div>
+  <div class="chat" id="chat">
+    <div class="chat-header">
+      <div class="badge"><span>A</span></div>
+      <div>
+        <div style="font-weight:800">AI Automation Assistant</div>
+        <div class="muted">Risponde in pochi secondi</div>
+      </div>
+      <button class="close" id="closeChat">Chiudi</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="msg bot">Ciao 👋 Posso aiutarti con orari, menù e prenotazioni.</div>
+    </div>
+    <div class="chat-input">
+      <input id="msg" placeholder="Scrivi qui… Es: Prenotazione domani alle 20 per 4" />
+      <button id="send">Invia</button>
+    </div>
+  </div>
+
+  <script>
+    // Calendly panel
+    const calBtn = document.getElementById('toggleCalendly');
+    const calPanel = document.getElementById('calPanel');
+    const closeCal = document.getElementById('closeCalendly');
+    const openCalendly = document.getElementById('openCalendly');
+    function toggleCal(){ calPanel.style.display = calPanel.style.display==='flex'?'none':'flex'; }
+    calBtn.onclick = toggleCal; closeCal.onclick = toggleCal;
+    if(openCalendly){ openCalendly.onclick = toggleCal; }
+
+    // Chat panel
+    const chatBtn = document.getElementById('toggleChat');
+    const chatPanel = document.getElementById('chat');
+    const closeChat = document.getElementById('closeChat');
+    const bodyEl = document.getElementById('chatBody');
+    const input = document.getElementById('msg');
+    const send = document.getElementById('send');
+    const ctx = [];
+    function toggleChat(){ chatPanel.style.display = chatPanel.style.display==='flex'?'none':'flex'; }
+    chatBtn.onclick = toggleChat; closeChat.onclick = toggleChat;
+
+    function addMsg(text, who='bot'){
+      const d = document.createElement('div');
+      d.className = 'msg ' + who;
+      d.textContent = text;
+      bodyEl.appendChild(d);
+      bodyEl.scrollTop = bodyEl.scrollHeight;
+    }
+
+    async function ask(){
+      const text = input.value.trim();
+      if(!text) return;
+      addMsg(text, 'user');
+      input.value = '';
+      try{
+        const r = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: text, context: ctx })
+        });
+        const data = await r.json();
+        if(!r.ok){
+          addMsg('Errore: ' + (data.detail?.error || data.detail || data.error || 'servizio non disponibile'), 'bot');
+          return;
+        }
+        const reply = data.reply || 'Ok.';
+        addMsg(reply, 'bot');
+        ctx.push({ role: 'user', content: text });
+        ctx.push({ role: 'assistant', content: reply });
+        if(ctx.length > 8) ctx.splice(0, ctx.length - 8);
+      }catch(e){
+        addMsg('Al momento non disponibile. Riprova tra poco 🙏', 'bot');
+      }
+    }
+    send.onclick = ask;
+    input.addEventListener('keydown', e => { if(e.key === 'Enter') ask(); });
+  </script>
+</body>
+</html>
