@@ -3,112 +3,122 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI Automation — Comunicazione che cresce i tuoi numeri</title>
-  <meta name="description" content="Chat AI 24/7, Voce AI che risponde al telefono, Sito web che converte. Una piattaforma semplice per far crescere lead, prenotazioni e recensioni." />
-  <meta name="theme-color" content="#0B0B0C" />
-  <meta property="og:title" content="AI Automation — Comunicazione che cresce i tuoi numeri" />
-  <meta property="og:description" content="Chat AI, Voce AI e Sito che converte: un unico sistema. Stile Apple, performance reali." />
+  <title>AI Automation — La nuova era della comunicazione aziendale</title>
+  <meta name="description" content="Chat AI 24/7, Voce AI che risponde al telefono e Sito che converte. Una piattaforma ispirata alla semplicità Apple: minimal, potente, misurabile." />
+  <meta name="theme-color" content="#0b0c0d" />
+  <meta property="og:title" content="AI Automation — La nuova era della comunicazione aziendale" />
+  <meta property="og:description" content="Chat AI, Voce AI e Sito ad alte conversioni in un unico sistema elegante. Risultati, non software." />
   <meta property="og:url" content="https://aiautomation.enterprises/" />
 
-  <style>
-    /* ======= RESET & THEME ======= */
-    :root{
-      --bg:#0B0B0C; --panel:#111214; --panel-2:#0E0F11; --line:#1c1d21;
-      --text:#FFFFFF; --muted:#B8BBC2; --muted-2:#9AA0A6;
-      --accent:#0A84FF; --accent-2:#66A3FF;
-    }
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Segoe UI",Inter,Roboto,Helvetica,Arial;}
-    img{max-width:100%;height:auto}
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
-    .fine{border-top:1px solid var(--line)}
-    .shadow-s{box-shadow:0 10px 30px rgba(0,0,0,.25)}
-    .card{background:var(--panel);border:1px solid var(--line);border-radius:20px}
-    .btn{display:inline-block;padding:12px 18px;border-radius:999px;font-weight:700;transition:transform .15s ease,opacity .15s ease}
-    .btn:hover{transform:translateY(-1px)}
-    .btn-primary{background:var(--accent);color:#fff;border:0}
-    .btn-ghost{background:#17181B;border:1px solid var(--line);color:#EDEDED}
-    .eyebrow{letter-spacing:.12em;text-transform:uppercase;font-size:12px;color:var(--muted)}
-    .title-xl{font-size:56px;line-height:1.04;letter-spacing:-.02em;margin:0}
-    .title-l{font-size:36px;line-height:1.08;letter-spacing:-.02em;margin:0}
-    .title-m{font-size:24px;margin:0}
-    .copy{color:var(--muted);font-size:18px;line-height:1.55}
-    .copy-s{color:var(--muted);font-size:14px;line-height:1.55}
+  <!-- Tipografia: stack system (vicino a SF Pro), fallback Inter via Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    /* ======= NAV ======= */
-    .nav{position:sticky;top:0;z-index:50;background:rgba(11,11,12,.75);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+  <style>
+    /* ===== THEME ===== */
+    :root{
+      --bg:#0b0c0d;         /* sfondo nav / overlay */
+      --canvas:#0f1113;     /* sfondo pagina scuro-apple */
+      --panel:#0c0e10;
+      --line:#1b1e23;
+      --text:#ffffff;
+      --muted:#c7cbd2;
+      --muted-2:#9aa0a8;
+      --accent:#0A84FF;     /* blu Apple */
+      --accent-2:#66A3FF;
+      --shadow:0 20px 60px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--canvas);color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Segoe UI",Inter,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+
+    /* ===== NAV ===== */
+    .nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);
+      background:rgba(15,17,19,.6);border-bottom:1px solid rgba(255,255,255,.06)}
     .nav-inner{height:64px;display:flex;align-items:center;justify-content:space-between}
     .brand{display:flex;align-items:center;gap:10px}
-    .logo{width:28px;height:28px;border-radius:7px;background:#0E0F11;border:1px solid #1b1c20;display:grid;place-items:center}
+    .logo{width:26px;height:26px;border-radius:7px;background:#0f1113;border:1px solid #1c1f23;display:grid;place-items:center;box-shadow:inset 0 0 18px rgba(10,132,255,.22)}
     .logo span{font-weight:900;color:#fff}
-    .links{display:flex;gap:16px}
-    .links a{color:#EDEDED;font-weight:600;font-size:14px;opacity:.9}
+    .links{display:flex;gap:18px;align-items:center}
+    .links a{font-weight:600;font-size:14px;color:#eef1f4;opacity:.9}
     .links a:hover{opacity:1}
-    .nav-cta{display:flex;gap:10px}
+    .btn{display:inline-block;border-radius:999px;padding:10px 16px;font-weight:700;transition:transform .15s ease,opacity .15s ease}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:var(--accent);color:#fff;border:0}
 
-    /* ======= HERO ======= */
-    .hero{padding:90px 0 40px;background:
-      radial-gradient(1000px 300px at 50% -10%, rgba(10,132,255,.08), transparent 60%);}
-    .hero .lead{max-width:860px}
-    .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-    .hero-kpis{display:flex;gap:28px;flex-wrap:wrap;margin-top:26px;color:#F1F3F5}
+    /* ===== FULLSCREEN SECTIONS (Apple-like) ===== */
+    .snap{scroll-snap-type:y mandatory; height:100vh; overflow-y:auto}
+    section{min-height:100vh; display:flex; align-items:center; border-bottom:1px solid var(--line);
+      scroll-snap-align:start; scroll-snap-stop:always;}
+    .hero{position:relative;background:
+      radial-gradient(1200px 350px at 50% -10%, rgba(10,132,255,.12), transparent 60%);}
+    .title-xl{font-size:56px; line-height:1.04; letter-spacing:-.02em; margin:0}
+    .title-l{font-size:38px; line-height:1.08; letter-spacing:-.02em; margin:0}
+    .title-m{font-size:24px; margin:0}
+    .copy{color:var(--muted); font-size:18px; line-height:1.6}
+    .copy-s{color:var(--muted-2); font-size:14px; line-height:1.6}
+    .eyebrow{letter-spacing:.12em; text-transform:uppercase; font-size:12px; color:var(--muted-2)}
+
+    /* Cards & panels */
+    .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+    .card{background:linear-gradient(180deg,#0f1214,#0c0e10); border:1px solid var(--line); border-radius:22px; padding:24px; box-shadow:var(--shadow)}
+    .panel{background:linear-gradient(180deg,#101317,#0c0f12); border:1px solid var(--line); border-radius:22px; padding:24px; box-shadow:var(--shadow)}
+
+    /* Buttons row */
+    .row{display:flex; gap:12px; flex-wrap:wrap}
+    .btn-ghost{background:#14171b; border:1px solid var(--line); color:#e9edf2}
+
+    /* KPIs */
+    .kpis{display:flex; gap:26px; flex-wrap:wrap; margin-top:20px}
     .kpi b{font-size:28px}
-    .kpi small{display:block;color:var(--muted)}
+    .kpi small{display:block; color:var(--muted-2)}
 
-    /* ======= WHY ======= */
-    .why{padding:56px 0}
-    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .why .card{padding:22px}
-    .why h3{margin:0 0 8px;color:#EDEDED;font-size:20px}
-    .why p{margin:0;color:var(--muted)}
+    /* HOW steps */
+    .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+    .step .n{display:inline-block; background:#14181d; border:1px solid var(--line);
+      color:#e8ecf2; padding:6px 8px; border-radius:10px; font-weight:800; margin-bottom:10px}
 
-    /* ======= HOW ======= */
-    .how{padding:64px 0}
-    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .step{padding:22px;border-radius:18px;background:var(--panel-2);border:1px solid var(--line)}
-    .step .n{display:inline-block;background:#15161A;border:1px solid var(--line);border-radius:10px;padding:6px 8px;margin-bottom:10px;color:#EDEDED;font-weight:800}
+    /* Pricing */
+    .pricing .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+    .p{border-radius:22px; border:1px solid var(--line); background:linear-gradient(180deg,#0f1214,#0b0d10);
+      padding:24px; display:flex; flex-direction:column; position:relative; overflow:hidden}
+    .badge{position:absolute; top:12px; right:12px; background:#10141a; border:1px solid var(--line); color:#dfe6ef; font-size:11px; font-weight:800; border-radius:999px; padding:6px 8px}
+    .tier{font-weight:800; margin:0 0 6px}
+    .desc{color:var(--muted); font-size:14px; margin:0 0 14px}
+    .price{display:flex; align-items:baseline; gap:10px; margin:8px 0 18px}
+    .mrc{font-size:28px; font-weight:900}
+    .setup{color:var(--muted-2); font-size:13px}
+    .features{margin:10px 0 18px; display:grid; gap:8px; padding-left:18px}
+    .features li{color:#e9edf2}
+    .p.pro{border:1px solid rgba(255,255,255,.14); box-shadow:0 30px 60px rgba(0,0,0,.45)}
 
-    /* ======= PRICING ======= */
-    .pricing{padding:70px 0}
-    .pricing-sub{color:var(--muted);margin:10px 0 22px}
-    .grid-p{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .p{padding:22px;border-radius:20px;background:var(--panel);border:1px solid var(--line);display:flex;flex-direction:column;position:relative;overflow:hidden}
-    .p .badge{position:absolute;top:12px;right:12px;background:#0f1116;border:1px solid var(--line);color:#dfe6ef;font-size:11px;font-weight:800;border-radius:999px;padding:6px 8px}
-    .tier{font-weight:800;margin:0 0 6px}
-    .desc{color:var(--muted);font-size:14px;margin:0 0 14px}
-    .price{display:flex;align-items:baseline;gap:10px;margin:8px 0 18px}
-    .mrc{font-size:28px;font-weight:900}
-    .setup{color:var(--muted);font-size:13px}
-    .features{margin:10px 0 18px;display:grid;gap:8px}
-    .features li{list-style:none;display:flex;gap:8px;align-items:flex-start}
-    .features li:before{content:"•";color:#dfe6ef;font-weight:900;margin-top:-1px}
-    .cta{display:flex;gap:10px;margin-top:auto}
-    .p.pro{border:1px solid rgba(255,255,255,.15);box-shadow:0 20px 50px rgba(0,0,0,.35)}
-    .note{margin-top:10px;color:var(--muted);font-size:12px}
+    /* Voice */
+    .voice .grid{display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:center}
 
-    /* ======= VOICE ======= */
-    .voice{padding:64px 0}
-    .v-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
-    .panel{padding:22px;border-radius:20px;background:var(--panel);border:1px solid var(--line)}
-    .panel ul{margin:12px 0;padding-left:18px}
-    .panel li{color:var(--muted);margin:6px 0}
+    /* Calendly */
+    .cal .frame{border-radius:22px; border:1px solid var(--line); background:linear-gradient(180deg,#0f1214,#0b0d10); padding:10px; box-shadow:var(--shadow)}
+    .cal iframe{width:100%; height:740px; border:0; border-radius:14px; background:#0b0c0d}
 
-    /* ======= CALENDLY ======= */
-    .cal{padding:64px 0}
-    .cal .frame{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:10px}
-    .cal iframe{width:100%;height:740px;border:0;border-radius:14px;background:#0b0b0b}
+    /* Footer */
+    .footer{min-height:60vh; display:flex; align-items:center}
+    .foot-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px}
+    .foot-links{display:flex; gap:20px; flex-wrap:wrap; color:#dfe3e8}
+    .foot-small{color:var(--muted-2); font-size:13px}
 
-    /* ======= FOOTER ======= */
-    .footer{padding:40px 0;color:var(--muted);font-size:14px}
-    .footer-links{display:flex;gap:20px;flex-wrap:wrap}
-    .footer small{display:block;margin-top:8px;color:#8f949c}
+    /* Animations (Apple-like subtle) */
+    .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease}
+    .reveal.in{opacity:1; transform:none}
 
-    /* ======= RESPONSIVE ======= */
+    /* Responsive */
     @media (max-width:980px){
-      .title-xl{font-size:40px}
-      .title-l{font-size:28px}
-      .why-grid,.steps,.grid-p,.v-grid{grid-template-columns:1fr}
+      .title-xl{font-size:42px}
+      .title-l{font-size:30px}
+      .grid-3, .steps, .pricing .grid, .voice .grid, .foot-grid{grid-template-columns:1fr}
       .cal iframe{height:860px}
+      .navbar-hide{display:none}
     }
   </style>
 </head>
@@ -119,205 +129,226 @@
     <div class="wrap nav-inner">
       <a class="brand" href="#">
         <div class="logo"><span>A</span></div>
-        <div class="brand-name" style="font-weight:800;letter-spacing:.2px;">AI Automation</div>
+        <div style="font-weight:800;letter-spacing:.2px">AI Automation</div>
       </a>
       <nav class="links">
-        <a href="#perche">Perché</a>
-        <a href="#come">Come funziona</a>
-        <a href="#prezzi">Prezzi</a>
+        <a href="#why" class="navbar-hide">Perché</a>
+        <a href="#how" class="navbar-hide">Come funziona</a>
+        <a href="#pricing" class="navbar-hide">Prezzi</a>
         <a href="#demo" class="btn btn-primary">Prenota demo</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap">
-      <p class="eyebrow">Sistema • Chat AI • Voce AI • Sito</p>
-      <h1 class="title-xl">Più prenotazioni. Meno lavoro. <br/>Una piattaforma che lavora per te.</h1>
-      <p class="copy lead">Chat AI 24/7, Voce AI che risponde al telefono e Sito che converte. In 24 ore, trasformi messaggi e chiamate in **clienti**. Nessun software da imparare: <b>risultati misurabili</b>, ogni settimana.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="https://calendly.com/ai-automation-contact/30min" target="_blank" rel="noopener">Prenota una demo gratuita</a>
-        <a class="btn btn-ghost" href="#prezzi">Vedi prezzi</a>
+  <!-- SCROLL-SNAP CONTAINER -->
+  <main class="snap">
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="wrap reveal">
+        <p class="eyebrow">Sistema • Chat AI • Voce AI • Sito</p>
+        <h1 class="title-xl">La nuova era della comunicazione aziendale.</h1>
+        <p class="copy" style="max-width:860px;margin-top:12px">
+          Chat AI 24/7, Voce AI che risponde al telefono e Sito che converte. In 24 ore trasformi messaggi e chiamate in <b>clienti</b>.
+          Nessun software da imparare: <b>risultati misurabili</b>, ogni settimana.
+        </p>
+        <div class="row" style="margin-top:18px">
+          <a class="btn btn-primary" href="https://calendly.com/ai-automation-contact/30min" target="_blank" rel="noopener">Prenota una demo gratuita</a>
+          <a class="btn btn-ghost" href="#pricing">Vedi prezzi</a>
+        </div>
+        <div class="kpis" aria-label="Indicatori chiave">
+          <div class="kpi"><b>+32</b><small>prenotazioni/mese*</small></div>
+          <div class="kpi"><b>+48%</b><small>recensioni positive*</small></div>
+          <div class="kpi"><b>–8h</b><small>chat manuale/sett*</small></div>
+        </div>
+        <p class="copy-s" style="margin-top:8px">*obiettivi tipici con automazioni e ottimizzazione continua</p>
       </div>
-      <div class="hero-kpis" aria-label="Indicatori chiave">
-        <div class="kpi"><b>+32</b><small>prenotazioni/mese*</small></div>
-        <div class="kpi"><b>+48%</b><small>recensioni positive*</small></div>
-        <div class="kpi"><b>–8h</b><small>chat manuale/sett*</small></div>
-      </div>
-      <p class="copy-s" style="margin-top:8px;color:#8f949c;">*obiettivi tipici con automazioni e ottimizzazione continua</p>
-    </div>
-  </section>
+    </section>
 
-  <!-- WHY -->
-  <section id="perche" class="why fine">
-    <div class="wrap">
-      <h2 class="title-l" style="margin:8px 0 18px">Perché funziona</h2>
-      <div class="why-grid">
-        <div class="card">
-          <h3>Risposte immediate</h3>
-          <p>Chat AI allenata sul tuo business: orari, menù/servizi, FAQ. Sempre pronta, sempre coerente.</p>
-        </div>
-        <div class="card">
-          <h3>Telefono senza attese</h3>
-          <p>Voce AI naturale che capisce l’intento, raccoglie i dati e invia SMS. Trasferisce a un umano quando serve.</p>
-        </div>
-        <div class="card">
-          <h3>Sito che converte</h3>
-          <p>Design pulito, CTA chiare, analytics. Tutto ottimizzato per prenotazioni e richieste.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW -->
-  <section id="come" class="how fine">
-    <div class="wrap">
-      <h2 class="title-l" style="margin:0 0 18px">Come funziona</h2>
-      <div class="steps">
-        <div class="step">
-          <span class="n">1 · Setup 24h</span>
-          <p class="copy-s">Raccogliamo orari, servizi e tono di voce. Attiviamo chat, voce e sito con il tuo brand.</p>
-        </div>
-        <div class="step">
-          <span class="n">2 · Automazioni</span>
-          <p class="copy-s">Prenotazioni guidate, promemoria, richieste recensione, SMS di conferma. Tutto automatico.</p>
-        </div>
-        <div class="step">
-          <span class="n">3 · Numeri chiari</span>
-          <p class="copy-s">Report settimanale con messaggi, chiamate, prenotazioni e recensioni. Miglioriamo ogni mese.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRICING -->
-  <section id="prezzi" class="pricing fine" aria-labelledby="pricing-title">
-    <div class="wrap">
-      <h2 id="pricing-title" class="title-l">Prezzi semplici, valore concreto</h2>
-      <p class="pricing-sub">Setup più basso, canone orientato ai risultati. Puoi crescere quando vuoi.</p>
-
-      <div class="grid-p" role="list">
-        <!-- START -->
-        <article class="p" role="listitem" aria-label="Piano Start">
-          <h3 class="tier">Start</h3>
-          <p class="desc">Per partire subito con sito e assistente AI.</p>
-          <div class="price">
-            <div class="mrc">€44/m</div>
-            <div class="setup">Setup una tantum: €339</div>
+    <!-- WHY -->
+    <section id="why">
+      <div class="wrap reveal">
+        <h2 class="title-l" style="margin-bottom:18px">Perché funziona</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3 class="title-m">Risposte immediate</h3>
+            <p class="copy">Chat AI allenata sul tuo business: orari, servizi/menù, FAQ. Sempre pronta, sempre coerente.</p>
           </div>
-          <ul class="features">
-            <li>Sito 1 pagina (Hero, Servizi, Orari, Contatti)</li>
-            <li>Chat AI 24/7 (web + WhatsApp)</li>
-            <li>Raccolta contatti + email automatica</li>
-            <li>Hosting + dominio 1 anno</li>
-          </ul>
-          <div class="cta">
-            <a class="btn btn-primary" href="https://calendly.com/ai-automation-contact/30min" target="_blank" rel="noopener">Prenota demo</a>
-            <a class="btn btn-ghost" href="mailto:ai.automation.contact@gmail.com?subject=Info%20piano%20Start">Scrivici</a>
+          <div class="card">
+            <h3 class="title-m">Telefono senza attese</h3>
+            <p class="copy">Voce AI naturale che capisce l’intento, raccoglie i dati e invia SMS. Trasferisce a un umano quando serve.</p>
           </div>
-        </article>
-
-        <!-- PRO -->
-        <article class="p pro" role="listitem" aria-label="Piano Pro">
-          <span class="badge">Più scelto</span>
-          <h3 class="tier">Pro</h3>
-          <p class="desc">Automazioni avanzate e voce AI sul tuo numero.</p>
-          <div class="price">
-            <div class="mrc">€89/m</div>
-            <div class="setup">Setup una tantum: €594</div>
-          </div>
-          <ul class="features">
-            <li>Tutto di “Start”</li>
-            <li>Sito professionale (3–5 sezioni)</li>
-            <li>Voce AI Base (risponde + SMS)</li>
-            <li>Dashboard prenotazioni e lead</li>
-            <li>2 aggiornamenti sito/mese</li>
-          </ul>
-          <div class="cta">
-            <a class="btn btn-primary" href="https://calendly.com/ai-automation-contact/30min" target="_blank" rel="noopener">Prenota demo</a>
-            <a class="btn btn-ghost" href="mailto:ai.automation.contact@gmail.com?subject=Info%20piano%20Pro">Scrivici</a>
-          </div>
-        </article>
-
-        <!-- ELITE -->
-        <article class="p" role="listitem" aria-label="Piano Elite">
-          <h3 class="tier">Elite</h3>
-          <p class="desc">Sistema completo, personalizzazione totale.</p>
-          <div class="price">
-            <div class="mrc">€149/m</div>
-            <div class="setup">Setup una tantum: €935</div>
-          </div>
-          <ul class="features">
-            <li>Tutto di “Pro”</li>
-            <li>Voce AI Pro (prenotazioni complete + trasferimento)</li>
-            <li>Sito premium personalizzato (SEO, Analytics, multilingua)</li>
-            <li>CRM clienti + report mensile</li>
-            <li>Supporto prioritario</li>
-          </ul>
-          <div class="cta">
-            <a class="btn btn-primary" href="https://calendly.com/ai-automation-contact/30min" target="_blank" rel="noopener">Prenota demo</a>
-            <a class="btn btn-ghost" href="mailto:ai.automation.contact@gmail.com?subject=Info%20piano%20Elite">Scrivici</a>
-          </div>
-        </article>
-      </div>
-
-      <p class="note">*Eventuali costi di messaggistica/AI a consumo non inclusi. Prezzi IVA esclusa.</p>
-    </div>
-  </section>
-
-  <!-- VOICE AI -->
-  <section class="voice fine">
-    <div class="wrap">
-      <h2 class="title-l">Voce AI: zero chiamate perse</h2>
-      <div class="v-grid">
-        <div class="panel">
-          <p class="copy">Risponde con voce naturale, capisce l’intento del cliente, guida la prenotazione e invia un SMS di conferma. Se serve, trasferisce la chiamata al titolare. Fuori orario: voicemail con trascrizione.</p>
-          <ul>
-            <li>Saluto personalizzato con nome attività</li>
-            <li>ASR + domande guidate (giorno/ora/persone)</li>
-            <li>SMS di riepilogo automatico</li>
-            <li>Trasferimento a umano in un clic</li>
-            <li>Statistiche chiamate e lead</li>
-          </ul>
-          <div style="margin-top:12px" class="hero-cta">
-            <a class="btn btn-primary" href="https://calendly.com/ai-automation-contact/30min" target="_blank" rel="noopener">Ascolta la demo</a>
-            <a class="btn btn-ghost" href="#prezzi">Vedi piani</a>
+          <div class="card">
+            <h3 class="title-m">Sito che converte</h3>
+            <p class="copy">Design pulito, CTA chiare, analytics. Tutto ottimizzato per prenotazioni e richieste.</p>
           </div>
         </div>
-        <div class="panel">
-          <!-- placeholder immagine telefono; sostituisci con tuo asset -->
-          <img alt="Anteprima Voce AI" src="https://images.unsplash.com/photo-1518443895914-4a42a89b8c2a?q=80&w=1200&auto=format&fit=crop" style="border-radius:14px">
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section id="how">
+      <div class="wrap reveal">
+        <h2 class="title-l" style="margin-bottom:18px">Come funziona</h2>
+        <div class="steps">
+          <div class="panel step">
+            <span class="n">1 · Setup 24h</span>
+            <p class="copy">Raccogliamo orari, servizi e tono di voce. Attiviamo chat, voce e sito con il tuo brand.</p>
+          </div>
+          <div class="panel step">
+            <span class="n">2 · Automazioni</span>
+            <p class="copy">Prenotazioni guidate, promemoria, richieste recensione, SMS di conferma. Tutto automatico.</p>
+          </div>
+          <div class="panel step">
+            <span class="n">3 · Numeri chiari</span>
+            <p class="copy">Report settimanale con messaggi, chiamate, prenotazioni e recensioni. Miglioriamo ogni mese.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CALENDLY -->
-  <section id="demo" class="cal fine">
-    <div class="wrap">
-      <h2 class="title-l">Prenota una demo di 30 minuti</h2>
-      <p class="copy-s" style="margin:4px 0 14px">Ti mostriamo come trasformiamo messaggi e chiamate in clienti, senza cambiare le tue abitudini.</p>
-      <div class="frame">
-        <iframe title="Calendly: AI Automation — 30 minuti" src="https://calendly.com/ai-automation-contact/30min?hide_event_type_details=1&hide_gdpr_banner=1"></iframe>
+    <!-- VOICE AI -->
+    <section id="voice">
+      <div class="wrap reveal">
+        <h2 class="title-l" style="margin-bottom:18px">Voce AI: zero chiamate perse</h2>
+        <div class="voice grid">
+          <div class="panel">
+            <p class="copy">Risponde con voce naturale, capisce l’intento del cliente, guida la prenotazione e invia un SMS di conferma. Se serve, trasferisce la chiamata al titolare. Fuori orario: voicemail con trascrizione.</p>
+            <ul class="copy">
+              <li>Saluto personalizzato con nome attività</li>
+              <li>ASR + domande guidate (giorno/ora/persone)</li>
+              <li>SMS di riepilogo automatico</li>
+              <li>Trasferimento a umano in un clic</li>
+              <li>Statistiche chiamate e lead</li>
+            </ul>
+            <div class="row" style="margin-top:12px">
+              <a class="btn btn-primary" href="https://calendly.com/ai-automation-contact/30min" target="_blank" rel="noopener">Ascolta la demo</a>
+              <a class="btn btn-ghost" href="#pricing">Vedi piani</a>
+            </div>
+          </div>
+          <div class="panel" style="display:grid;place-items:center">
+            <!-- Sostituisci con un tuo mockup/foto -->
+            <img alt="Anteprima Voce AI" src="https://images.unsplash.com/photo-1518443895914-4a42a89b8c2a?q=80&w=1800&auto=format&fit=crop" style="border-radius:16px;opacity:.98">
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="wrap">
-      <div class="footer-links">
-        <div>📧 <a href="mailto:ai.automation.contact@gmail.com">ai.automation.contact@gmail.com</a></div>
-        <div>📞 <a href="tel:+393345965522">+39 334 596 5522</a></div>
-        <div>🌐 <a href="https://aiautomation.enterprises/" target="_blank" rel="noopener">aiautomation.enterprises</a></div>
+    <!-- PRICING -->
+    <section id="pricing" class="pricing">
+      <div class="wrap reveal">
+        <h2 class="title-l">Prezzi semplici, valore concreto</h2>
+        <p class="copy" style="margin:8px 0 20px">Setup più basso, canone orientato ai risultati. Puoi crescere quando vuoi.</p>
+
+        <div class="grid">
+          <!-- Start -->
+          <article class="p" aria-label="Piano Start">
+            <h3 class="tier">Start</h3>
+            <p class="desc">Per partire subito con sito e assistente AI.</p>
+            <div class="price">
+              <div class="mrc">€44/m</div>
+              <div class="setup">Setup una tantum: €339</div>
+            </div>
+            <ul class="features">
+              <li>Sito 1 pagina (Hero, Servizi, Orari, Contatti)</li>
+              <li>Chat AI 24/7 (web + WhatsApp)</li>
+              <li>Raccolta contatti + email automatica</li>
+              <li>Hosting + dominio 1 anno</li>
+            </ul>
+            <div class="row">
+              <a class="btn btn-primary" href="https://calendly.com/ai-automation-contact/30min" target="_blank" rel="noopener">Prenota demo</a>
+              <a class="btn btn-ghost" href="mailto:ai.automation.contact@gmail.com?subject=Info%20piano%20Start">Scrivici</a>
+            </div>
+          </article>
+
+          <!-- Pro -->
+          <article class="p pro" aria-label="Piano Pro">
+            <span class="badge">Più scelto</span>
+            <h3 class="tier">Pro</h3>
+            <p class="desc">Automazioni avanzate e voce AI sul tuo numero.</p>
+            <div class="price">
+              <div class="mrc">€89/m</div>
+              <div class="setup">Setup una tantum: €594</div>
+            </div>
+            <ul class="features">
+              <li>Tutto di “Start”</li>
+              <li>Sito professionale (3–5 sezioni)</li>
+              <li>Voce AI Base (risponde + SMS)</li>
+              <li>Dashboard prenotazioni e lead</li>
+              <li>2 aggiornamenti sito/mese</li>
+            </ul>
+            <div class="row">
+              <a class="btn btn-primary" href="https://calendly.com/ai-automation-contact/30min" target="_blank" rel="noopener">Prenota demo</a>
+              <a class="btn btn-ghost" href="mailto:ai.automation.contact@gmail.com?subject=Info%20piano%20Pro">Scrivici</a>
+            </div>
+          </article>
+
+          <!-- Elite -->
+          <article class="p" aria-label="Piano Elite">
+            <h3 class="tier">Elite</h3>
+            <p class="desc">Sistema completo, personalizzazione totale.</p>
+            <div class="price">
+              <div class="mrc">€149/m</div>
+              <div class="setup">Setup una tantum: €935</div>
+            </div>
+            <ul class="features">
+              <li>Tutto di “Pro”</li>
+              <li>Voce AI Pro (prenotazioni complete + trasferimento)</li>
+              <li>Sito premium personalizzato (SEO, Analytics, multilingua)</li>
+              <li>CRM clienti + report mensile</li>
+              <li>Supporto prioritario</li>
+            </ul>
+            <div class="row">
+              <a class="btn btn-primary" href="https://calendly.com/ai-automation-contact/30min" target="_blank" rel="noopener">Prenota demo</a>
+              <a class="btn btn-ghost" href="mailto:ai.automation.contact@gmail.com?subject=Info%20piano%20Elite">Scrivici</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="copy-s" style="margin-top:10px">*Eventuali costi di messaggistica/AI a consumo non inclusi. Prezzi IVA esclusa.</p>
       </div>
-      <small>© AI Automation — risultati, non promesse.</small>
-    </div>
-  </footer>
+    </section>
 
-  <!-- Smooth scroll per ancore interne -->
+    <!-- CALENDLY -->
+    <section id="demo" class="cal">
+      <div class="wrap reveal">
+        <h2 class="title-l">Prenota una demo di 30 minuti</h2>
+        <p class="copy-s" style="margin:6px 0 14px">Ti mostriamo come trasformiamo messaggi e chiamate in clienti, senza cambiare le tue abitudini.</p>
+        <div class="frame">
+          <iframe title="Calendly: AI Automation — 30 minuti" src="https://calendly.com/ai-automation-contact/30min?hide_event_type_details=1&hide_gdpr_banner=1"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER (pulito, spazioso) -->
+    <section class="footer">
+      <div class="wrap reveal">
+        <div class="foot-grid panel" style="padding:28px">
+          <div>
+            <h3 class="title-m" style="margin-bottom:10px">AI Automation</h3>
+            <p class="copy">Sistemi semplici che fanno crescere i tuoi numeri. Chat AI, Voce AI e Sito: un’unica piattaforma elegante.</p>
+          </div>
+          <div>
+            <div class="foot-links">
+              <div>📧 <a href="mailto:ai.automation.contact@gmail.com">ai.automation.contact@gmail.com</a></div>
+              <div>📞 <a href="tel:+393345965522">+39 334 596 5522</a></div>
+              <div>🌐 <a href="https://aiautomation.enterprises/" target="_blank" rel="noopener">aiautomation.enterprises</a></div>
+            </div>
+            <p class="foot-small" style="margin-top:10px">© AI Automation — risultati, non promesse.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Reveal on view (subtle) -->
   <script>
+    const io = new IntersectionObserver((ents)=>{
+      ents.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
+    },{threshold:.2});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    // Smooth internal anchors
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click',e=>{
         const id=a.getAttribute('href'); if(id==="#"||!document.querySelector(id))return;
@@ -326,32 +357,32 @@
     });
   </script>
 
-  <!-- ========== CHAT WIDGET — Minimal Monochrome ========== -->
+  <!-- ====== CHAT WIDGET — Minimal Monochrome ====== -->
   <style>
     .aa-floating{position:fixed;right:18px;bottom:18px;z-index:9999}
-    .aa-btn{background:#0A84FF;color:#fff;border:none;border-radius:999px;padding:12px 16px;font-weight:800;cursor:pointer;box-shadow:0 12px 30px rgba(10,132,255,.35)}
-    .aa-chat{position:fixed;right:18px;bottom:86px;width:380px;max-width:92vw;max-height:78vh;display:none;flex-direction:column;background:#111214;border:1px solid #1d1f24;border-radius:16px;overflow:hidden;box-shadow:0 24px 48px rgba(0,0,0,.55)}
-    .aa-header{display:flex;gap:10px;align-items:center;padding:12px 14px;border-bottom:1px solid #1d1f24;background:linear-gradient(180deg,#0f1013,#0b0c0f)}
-    .aa-badge{width:36px;height:36px;border-radius:10px;background:#0e0f11;display:grid;place-items:center;border:1px solid #1b1c20;color:#fff;font-weight:900}
-    .aa-title{font-weight:800} .aa-sub{color:#B8BBC2;font-size:12px}
-    .aa-close{margin-left:auto;background:#15161A;border:1px solid #1d1f24;color:#dfe6ef;border-radius:8px;padding:6px 10px;cursor:pointer}
-    .aa-body{padding:12px;background:#0C0D10;overflow:auto}
+    .aa-btn{background:var(--accent);color:#fff;border:none;border-radius:999px;padding:12px 16px;font-weight:800;cursor:pointer;box-shadow:0 12px 30px rgba(10,132,255,.35)}
+    .aa-chat{position:fixed;right:18px;bottom:86px;width:380px;max-width:92vw;max-height:78vh;display:none;flex-direction:column;background:#101216;border:1px solid #1c1f24;border-radius:18px;overflow:hidden;box-shadow:0 24px 48px rgba(0,0,0,.55)}
+    .aa-header{display:flex;gap:10px;align-items:center;padding:12px 14px;border-bottom:1px solid #1c1f24;background:linear-gradient(180deg,#0e1013,#0b0c0f)}
+    .aa-badge{width:34px;height:34px;border-radius:9px;background:#0e0f11;display:grid;place-items:center;border:1px solid #1b1c20;color:#fff;font-weight:900}
+    .aa-title{font-weight:800} .aa-sub{color:#9aa0a8;font-size:12px}
+    .aa-close{margin-left:auto;background:#15161A;border:1px solid #1c1f24;color:#dfe6ef;border-radius:8px;padding:6px 10px;cursor:pointer}
+    .aa-body{padding:12px;background:#0c0e10;overflow:auto}
     .aa-msg{max-width:82%;margin:8px 0;padding:10px 12px;line-height:1.45;border-radius:12px;word-wrap:break-word}
-    .aa-bot{background:#0f1013;border:1px solid #1c1d21;color:#F3F4F6}
+    .aa-bot{background:#0f1013;border:1px solid #1c1f21;color:#F3F4F6}
     .aa-user{background:#171a20;border:1px solid #23262d;color:#F3F4F6}
-    .aa-input{display:flex;gap:8px;padding:10px;border-top:1px solid #1d1f24;background:#0C0D10}
-    .aa-input input{flex:1;background:#0e1014;border:1px solid #1d1f24;color:#fff;border-radius:10px;padding:10px}
-    .aa-input button{background:#0A84FF;border:none;color:#fff;border-radius:10px;padding:10px 12px;font-weight:800;cursor:pointer}
+    .aa-input{display:flex;gap:8px;padding:10px;border-top:1px solid #1c1f24;background:#0c0e10}
+    .aa-input input{flex:1;background:#0f1114;border:1px solid #1c1f24;color:#fff;border-radius:10px;padding:10px}
+    .aa-input button{background:var(--accent);border:none;color:#fff;border-radius:10px;padding:10px 12px;font-weight:800;cursor:pointer}
     .aa-quick{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
-    .aa-chip{border:1px solid #1d1f24;background:#121419;color:#eaeef3;padding:6px 8px;border-radius:999px;font-size:12px;cursor:pointer}
-    .aa-typing{display:none;gap:4px;align-items:center;color:#9AA0A6;font-size:12px;margin:4px 0 0 2px}
-    .aa-dot{width:6px;height:6px;border-radius:50%;background:#9AA0A6;animation:aaBlink 1.2s infinite}
+    .aa-chip{border:1px solid #1c1f24;background:#121419;color:#eaeef3;padding:6px 8px;border-radius:999px;font-size:12px;cursor:pointer}
+    .aa-typing{display:none;gap:4px;align-items:center;color:#9aa0a8;font-size:12px;margin:4px 0 0 2px}
+    .aa-dot{width:6px;height:6px;border-radius:50%;background:#9aa0a8;animation:aaBlink 1.2s infinite}
     .aa-dot:nth-child(2){animation-delay:.2s} .aa-dot:nth-child(3){animation-delay:.4s}
     @keyframes aaBlink{0%,80%,100%{opacity:.25} 40%{opacity:1}}
-    .aa-gdpr{margin-top:6px;font-size:11px;color:#9AA0A6}
-    .aa-lead{display:none;padding:10px;border-top:1px solid #1d1f24;background:#0C0D10}
-    .aa-lead input{width:100%;margin-top:6px;background:#0e1014;border:1px solid #1d1f24;color:#fff;border-radius:8px;padding:8px}
-    .aa-lead button{margin-top:8px;width:100%;background:#14171d;color:#e7e7e7;border:1px solid #1d1f24;border-radius:8px;padding:8px;cursor:pointer}
+    .aa-gdpr{margin-top:6px;font-size:11px;color:#9aa0a8}
+    .aa-lead{display:none;padding:10px;border-top:1px solid #1c1f24;background:#0c0e10}
+    .aa-lead input{width:100%;margin-top:6px;background:#0f1114;border:1px solid #1c1f24;color:#fff;border-radius:8px;padding:8px}
+    .aa-lead button{margin-top:8px;width:100%;background:#14171d;color:#e7e7e7;border:1px solid #1c1f24;border-radius:8px;padding:8px;cursor:pointer}
     @media(max-width:420px){.aa-chat{right:10px;bottom:76px;width:94vw}}
   </style>
 
@@ -388,7 +419,7 @@
     </div>
 
     <div id="aaLead" class="aa-lead">
-      <div style="color:#9AA0A6; font-size:12px">Lasciaci un recapito e ti richiamiamo:</div>
+      <div style="color:#9aa0a8; font-size:12px">Lasciaci un recapito e ti richiamiamo:</div>
       <input id="aaName" placeholder="Nome" />
       <input id="aaPhone" placeholder="Telefono" />
       <button id="aaSaveLead">Invia richiesta</button>
@@ -452,7 +483,7 @@
       };
     })();
   </script>
-  <!-- ========== /CHAT WIDGET ========== -->
+  <!-- ====== /CHAT WIDGET ====== -->
 
 </body>
 </html>
