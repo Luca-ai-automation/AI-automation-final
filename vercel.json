@@ -1,20 +1,15 @@
 {
   "version": 2,
   "public": true,
-  "trailingSlash": false,
   "cleanUrls": true,
+  "trailingSlash": false,
+  "functions": {
+    "server/chat.js": { "runtime": "nodejs20.x" },
+    "server/lead.js": { "runtime": "nodejs20.x" }
+  },
   "rewrites": [
+    { "source": "/chat", "destination": "/server/chat.js" },
+    { "source": "/lead", "destination": "/server/lead.js" },
     { "source": "/(.*)", "destination": "/index.html" }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
-      ]
-    }
   ]
 }
