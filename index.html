@@ -443,7 +443,7 @@
         pushCtx("user", text);
         typing.style.display="flex";
         try{
-          const r = await fetch("/api/chat", {
+          const r = await fetch('/chat', {
             method:"POST", headers:{ "Content-Type":"application/json" },
             body: JSON.stringify({
               sessionId,
@@ -470,7 +470,7 @@
       $("#aaSaveLead").onclick = async ()=>{
         const name=$("#aaName").value.trim(), phone=$("#aaPhone").value.trim();
         if(!phone){ addMsg("Inserisci un numero di telefono valido 📞","bot"); return; }
-        try{ await fetch("/api/lead",{method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify({sessionId, name, phone})}); }catch(_){}
+        try{ await fetch('/lead',{method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify({sessionId, name, phone})}); }catch(_){}
         addMsg("Grazie! Ti ricontattiamo a breve ✅","bot"); leadBox.style.display="none";
       };
     })();
